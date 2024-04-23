@@ -5,7 +5,7 @@ EAPI=8
 
 PYTHON_COMPAT=( python3_{9..12} )
 
-inherit cmake python-r1
+inherit cmake python-r1 llvm
 
 DESCRIPTION="ROCm System Management Interface Library"
 HOMEPAGE="https://github.com/RadeonOpenCompute/rocm_smi_lib"

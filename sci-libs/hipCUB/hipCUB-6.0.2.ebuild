@@ -5,7 +5,7 @@ EAPI=8
 
 ROCM_VERSION=${PV}
 
-inherit cmake rocm
+inherit cmake rocm llvm
 
 DESCRIPTION="Wrapper of rocPRIM or CUB for GPU parallel primitives"
 HOMEPAGE="https://github.com/ROCmSoftwarePlatform/hipCUB"

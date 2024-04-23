@@ -5,7 +5,7 @@ EAPI=8
 
 ROCM_VERSION=${PV}
 
-inherit cmake rocm
+inherit cmake rocm llvm
 
 DESCRIPTION="Composable Kernel (CK) library aims to provide a programming model for writing performance critical kernels for machine learning workloads."
 HOMEPAGE="https://github.com/ROCmSoftwarePlatform/composable_kernel"

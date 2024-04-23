@@ -6,7 +6,7 @@ EAPI=8
 ROCM_VERSION=${PV}
 HIPFFT_COMMIT=18c75d803dfd52bfd7cd07d8a4cede64bb945078
 
-inherit cmake rocm
+inherit cmake rocm llvm
 
 DESCRIPTION="CU / ROCM agnostic hip FFT implementation"
 HOMEPAGE="https://github.com/ROCmSoftwarePlatform/hipFFT"

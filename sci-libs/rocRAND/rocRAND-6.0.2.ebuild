@@ -5,7 +5,7 @@ EAPI=8
 
 ROCM_VERSION=${PV}
 
-inherit cmake rocm
+inherit cmake rocm llvm
 
 DESCRIPTION="Generate pseudo-random and quasi-random numbers"
 HOMEPAGE="https://github.com/ROCmSoftwarePlatform/rocRAND"

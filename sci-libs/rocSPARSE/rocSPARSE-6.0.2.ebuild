@@ -6,7 +6,7 @@ EAPI=8
 PYTHON_COMPAT=( python3_{9..12} )
 ROCM_VERSION=${PV}
 
-inherit cmake edo python-any-r1 toolchain-funcs rocm
+inherit cmake edo python-any-r1 toolchain-funcs rocm llvm
 
 DESCRIPTION="Basic Linear Algebra Subroutines for sparse computation"
 HOMEPAGE="https://github.com/ROCmSoftwarePlatform/rocSPARSE"

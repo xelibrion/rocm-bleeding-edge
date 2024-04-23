@@ -5,7 +5,7 @@ EAPI=8
 
 ROCM_VERSION=${PV}
 
-inherit cmake rocm
+inherit cmake rocm llvm
 
 DESCRIPTION="CU / ROCM agnostic hip RAND implementation"
 HOMEPAGE="https://github.com/ROCmSoftwarePlatform/hipRAND"

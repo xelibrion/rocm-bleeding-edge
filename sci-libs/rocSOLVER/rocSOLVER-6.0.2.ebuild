@@ -5,7 +5,7 @@ EAPI=8
 
 ROCM_VERSION=${PV}
 
-inherit cmake edo rocm
+inherit cmake edo rocm llvm
 
 DESCRIPTION="Implementation of a subset of LAPACK functionality on the ROCm platform"
 HOMEPAGE="https://github.com/ROCmSoftwarePlatform/rocSOLVER"

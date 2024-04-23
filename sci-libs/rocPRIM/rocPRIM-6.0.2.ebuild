@@ -4,7 +4,7 @@
 EAPI=8
 
 ROCM_VERSION=${PV}
-inherit rocm cmake
+inherit rocm cmake llvm
 
 DESCRIPTION="HIP parallel primitives for developing performant GPU-accelerated code on ROCm"
 HOMEPAGE="https://github.com/ROCmSoftwarePlatform/rocPRIM"

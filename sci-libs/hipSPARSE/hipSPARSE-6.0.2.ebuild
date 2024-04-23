@@ -5,7 +5,7 @@ EAPI=8
 
 ROCM_VERSION=${PV}
 
-inherit cmake edo rocm toolchain-funcs
+inherit cmake edo rocm toolchain-funcs llvm
 
 DESCRIPTION="ROCm SPARSE marshalling library"
 HOMEPAGE="https://github.com/ROCmSoftwarePlatform/hipSPARSE"

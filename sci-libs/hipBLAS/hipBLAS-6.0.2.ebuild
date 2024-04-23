@@ -5,7 +5,8 @@ EAPI=8
 
 ROCM_VERSION=${PV}
 
-inherit cmake rocm
+inherit cmake rocm llvm
+
 DESCRIPTION="ROCm BLAS marshalling library"
 HOMEPAGE="https://github.com/ROCmSoftwarePlatform/hipBLAS"
 SRC_URI="https://github.com/ROCmSoftwarePlatform/hipBLAS/archive/rocm-${PV}.tar.gz -> ${P}.tar.gz"
