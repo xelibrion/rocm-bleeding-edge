@@ -7,7 +7,7 @@ PYTHON_COMPAT=( python3_{10..11} )
 
 ROCM_VERSION=${PV}
 
-inherit cmake prefix python-any-r1 rocm
+inherit cmake prefix python-any-r1 rocm llvm
 
 DESCRIPTION="Callback/Activity Library for Performance tracing AMD GPU's"
 HOMEPAGE="https://github.com/ROCm-Developer-Tools/roctracer.git"
