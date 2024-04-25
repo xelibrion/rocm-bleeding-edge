@@ -23,7 +23,7 @@ RESTRICT="!test? ( test )"
 RDEPEND="
 	sys-devel/clang
 	>=dev-util/hip-5.1.3
-	=dev-util/roctracer-6.0.2
+	dev-util/roctracer:${SLOT}[${ROCM_USEDEP}]
 	>=dev-db/sqlite-3.17
 	sci-libs/rocBLAS:${SLOT}[${ROCM_USEDEP}]
 	>=dev-libs/boost-1.72
@@ -55,6 +55,8 @@ pkg_setup() {
 	export CC="$(get_llvm_prefix ${LLVM_MAX_SLOT})/bin/clang" CXX="$(get_llvm_prefix ${LLVM_MAX_SLOT})/bin/clang++" FC="$(get_llvm_prefix)/bin/flang" F77="$(get_llvm_prefix)/bin/flang"
 	tc-is-clang || die Needs Clang
 	strip-unsupported-flags
+	filter-flags -fuse-ld=*
+	append-flags -fuse-ld=lld
 }
 
 src_prepare() {
