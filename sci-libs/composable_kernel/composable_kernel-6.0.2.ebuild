@@ -28,7 +28,7 @@ BDEPEND="dev-build/rocm-cmake
 S="${WORKDIR}/${PN}-${COMPOSABLE_KERNEL_COMMIT_HASH}"
 
 PATCHES=(
-	"${FILESDIR}/${PN}-6.0.0-no-tests-or-examples.patch"
+	"${FILESDIR}/${PN}-6.0.0-do-not-build-tests-examples-profiler.patch"
 	"${FILESDIR}/sqrtf.patch"
 	"${FILESDIR}/${PN}-6.0.0-vanilla-llvm.patch"
 )

@@ -1,0 +1,23 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index b09da41a..37207daa 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -444,18 +444,8 @@ if(NOT DEFINED INSTANCES_ONLY)
+    add_subdirectory(example)
+    add_subdirectory(test)
+ 
+-   rocm_package_setup_component(profiler
+-        LIBRARY_NAME composablekernel
+-        PACKAGE_NAME ckprofiler
+-   )
+-   add_subdirectory(profiler)
+   else()
+     #When building PROFILER_ONLY, label the package with GPU_ARCH
+-    rocm_package_setup_component(profiler
+-       LIBRARY_NAME composablekernel
+-       PACKAGE_NAME ckprofiler_${GPU_ARCH}
+-    )
+-    add_subdirectory(profiler)
+   endif()
+ endif()
+ 
