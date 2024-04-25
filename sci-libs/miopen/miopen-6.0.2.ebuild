@@ -23,6 +23,7 @@ RESTRICT="!test? ( test )"
 RDEPEND="
 	sys-devel/clang
 	>=dev-util/hip-5.1.3
+	=dev-util/roctracer-6.0.2
 	>=dev-db/sqlite-3.17
 	sci-libs/rocBLAS:${SLOT}[${ROCM_USEDEP}]
 	>=dev-libs/boost-1.72
