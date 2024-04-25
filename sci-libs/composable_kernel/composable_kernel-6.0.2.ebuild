@@ -30,7 +30,6 @@ S="${WORKDIR}/${PN}-${COMPOSABLE_KERNEL_COMMIT_HASH}"
 PATCHES=(
 	"${FILESDIR}/${PN}-6.0.0-no-tests-or-examples.patch"
 	"${FILESDIR}/sqrtf.patch"
-	"${FILESDIR}/${PN}-6.0.2-restore-gfx900-support.patch"
 	"${FILESDIR}/${PN}-6.0.0-vanilla-llvm.patch"
 )
 
