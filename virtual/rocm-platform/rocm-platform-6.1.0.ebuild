@@ -3,18 +3,17 @@
 
 EAPI=8
 
-ROCM_VERSION=${PV}
-
-inherit cmake rocm llvm
-
 DESCRIPTION="AMD ROCm Software stack"
 HOMEPAGE="https://github.com/ROCm/ROCm"
 
-LICENSE="MIT"
-KEYWORDS="~amd64"
+ROCM_VERSION=${PV}
 SLOT="0/$(ver_cut 1-2)"
 
-RDEPEND="dev-util/hip"
+LICENSE="MIT"
+KEYWORDS="~amd64"
 
-DEPEND="${RDEPEND}"
-
+RDEPEND="
+	|| (
+		dev-util/hip:${SLOT}
+	)
+"
