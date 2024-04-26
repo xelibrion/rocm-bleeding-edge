@@ -15,5 +15,20 @@ KEYWORDS="~amd64"
 RDEPEND="
 	|| (
 		dev-util/hip:${SLOT}
+		sci-libs/miopen:${SLOT}
+
+		sci-libs/hipBLAS:${SLOT}
+		sci-libs/hipCUB:${SLOT}
+		sci-libs/hipFFT:${SLOT}
+		sci-libs/hipRAND:${SLOT}
+		sci-libs/hipSPARSE:${SLOT}
+
+		sci-libs/rocPRIM:${SLOT}
+		sci-libs/rocBLAS:${SLOT}
+		sci-libs/rocCUB:${SLOT}
+		sci-libs/rocFFT:${SLOT}
+		sci-libs/rocRAND:${SLOT}
+		sci-libs/rocSPARSE:${SLOT}
+		sci-libs/rocSOLVER:${SLOT}
 	)
 "
