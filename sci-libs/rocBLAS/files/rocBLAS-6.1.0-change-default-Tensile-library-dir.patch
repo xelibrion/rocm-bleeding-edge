@@ -1,0 +1,11 @@
+--- a/library/src/tensile_host.cpp
++++ b/library/src/tensile_host.cpp
+@@ -67,7 +67,7 @@ extern "C" void rocblas_shutdown();
+ #include <libgen.h>
+ #include <link.h>
+ #include <unistd.h>
+-#define ROCBLAS_LIB_PATH "/opt/rocm/lib/rocblas"
++#define ROCBLAS_LIB_PATH "@GENTOO_PORTAGE_EPREFIX@/usr/lib64/rocblas/library"
+ #endif
+ 
+ #if __has_include(<filesystem>)
