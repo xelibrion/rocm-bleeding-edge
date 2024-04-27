@@ -40,15 +40,9 @@ BDEPEND="dev-libs/half:0/1
 S="${WORKDIR}/MIOpen-rocm-${PV}"
 
 PATCHES=(
-	"${FILESDIR}/${PN}-4.2.0-disable-no-inline-boost.patch"
-	"${FILESDIR}/${PN}-4.2.0-gcc11-numeric_limits.patch"
 	"${FILESDIR}/${PN}-4.3.0-fix-interface-include-in-HIP_COMPILER_FLAGS.patch"
-	"${FILESDIR}/${PN}-4.3.0-enable-test.patch"
-	#"${FILESDIR}/${PN}-5.1.3-deprecate-clang-ocl.patch"
 	"${FILESDIR}/${PN}-5.1.3-no-strip.patch"
 	"${FILESDIR}/${PN}-5.1.3-include-array.patch"
-	#"${FILESDIR}/${PN}-5.1.3-avoid-metadata-error-for-vanilla-clang.patch"
-	"${FILESDIR}/${PN}-6.0.0-find-unzipper.patch"
 )
 
 pkg_setup() {
@@ -103,7 +97,7 @@ src_configure() {
 		-DMIOPEN_BACKEND=HIP
 		-DBoost_USE_STATIC_LIBS=OFF
 		-DMIOPEN_USE_MLIR=OFF
-		-DBUILD_TESTS=$(usex test ON OFF)
+		-DBUILD_TESTING=$(usex test ON OFF)
 		-DMIOPEN_USE_COMPOSABLEKERNEL=ON
 		-DBUILD_FILE_REORG_BACKWARD_COMPATIBILITY=OFF
 		-DROCM_SYMLINK_LIBS=OFF

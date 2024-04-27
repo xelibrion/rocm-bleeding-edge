@@ -1,0 +1,15 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index bdeba33e..06413200 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -148,10 +148,6 @@ find_package(hip)
+ # SWDEV-413293 and https://reviews.llvm.org/D155213
+ math(EXPR hip_VERSION_FLAT "(${hip_VERSION_MAJOR} * 1000 + ${hip_VERSION_MINOR}) * 100000 + ${hip_VERSION_PATCH}")
+ message("hip_version_flat=${hip_VERSION_FLAT}")
+-if(NOT WIN32 AND ${hip_VERSION_FLAT} GREATER 500723302)
+-   message("Adding the fno-offload-uniform-block compiler flag")
+-   add_compile_options(-fno-offload-uniform-block)
+-endif()
+ 
+ #
+ # Seperate linking jobs from compiling
