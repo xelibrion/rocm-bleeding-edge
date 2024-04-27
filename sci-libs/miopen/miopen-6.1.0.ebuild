@@ -22,11 +22,11 @@ RESTRICT="!test? ( test )"
 
 RDEPEND="
 	sys-devel/clang
-	>=dev-util/hip-5.1.3
+	>=dev-util/hip-6
+	>=dev-libs/boost-1.79
+	>=dev-db/sqlite-3.17	
 	dev-util/roctracer:${SLOT}[${ROCM_USEDEP}]
-	>=dev-db/sqlite-3.17
 	sci-libs/rocBLAS:${SLOT}[${ROCM_USEDEP}]
-	>=dev-libs/boost-1.72
 	sci-libs/composable_kernel:${SLOT}[${ROCM_USEDEP}]
 	sci-libs/frugally-deep
 "
